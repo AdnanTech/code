@@ -10,10 +10,14 @@
 * [C++](code/cpp.md)
 * [SQL](code/sql.md)
 * [VBA](code/vba.md)
+* [Powershell](code/powershell.md)
+* [Bash](code/bash.md)
 
 ## Tools
 
 * [Git](tools/git.md)
+* [Vim](tools/vim.md)
+* [GitBook](tools/gitbook.md)
 * [Pentaho](tools/pentaho.md)
 * [Excel](tools/excel.md)
 
