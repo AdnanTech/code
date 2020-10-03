@@ -6,7 +6,10 @@
 
 * [Python](code/python.md)
 * [C\#](code/c-sharp.md)
-* [C](code/c.md)
+* [C](code/c/README.md)
+  * [General Notes](code/c/general-notes.md)
+  * [Template](code/c/template.md)
+  * [Strings](code/c/strings.md)
 * [C++](code/cpp.md)
 * [SQL](code/sql.md)
 * [VBA](code/vba.md)
