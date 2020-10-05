@@ -11,6 +11,7 @@
   * [Template](code/c/template.md)
   * [Strings](code/c/strings.md)
   * [Functions](code/c/functions.md)
+  * [Operators](code/c/operators.md)
 * [C++](code/cpp.md)
 * [SQL](code/sql.md)
 * [VBA](code/vba.md)
