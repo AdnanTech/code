@@ -1,6 +1,6 @@
 # Operators
 
-
+### Operator Examples
 
 {% code title="operatorsExamples.c" %}
 ```c
@@ -23,8 +23,6 @@ int main(void)
 }
 ```
 {% endcode %}
-
-
 
 {% code title="operatorsExamples.c" %}
 ```c
@@ -51,8 +49,6 @@ int main(void)
 }
 ```
 {% endcode %}
-
-
 
 {% code title="operatorsExamples.c" %}
 ```c
