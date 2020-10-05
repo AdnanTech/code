@@ -10,6 +10,7 @@
   * [General Notes](code/c/general-notes.md)
   * [Template](code/c/template.md)
   * [Strings](code/c/strings.md)
+  * [Functions](code/c/functions.md)
 * [C++](code/cpp.md)
 * [SQL](code/sql.md)
 * [VBA](code/vba.md)
