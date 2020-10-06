@@ -2,7 +2,9 @@
 
 General form of a for loop
 
-{% code title="" %}
+{% tabs %}
+{% tab title="For" %}
+{% code title="iterationFor.c" %}
 ```c
 /***********************************************************************
 * iterationFor.c
@@ -68,7 +70,7 @@ void iterationTestingFour(void)
     int x, sum=0, i;
     
     /* initialization  */
-    for(x=1; x<=10; ++x) 
+    for(x = 1; x <= 10; ++x) 
     /* Ask user 10 times(i.e. x takes 10 integers)  */
     {
         printf("Enter #%d: ",x); 
@@ -77,10 +79,14 @@ void iterationTestingFour(void)
     } 
     printf("Total Sum of 10 numbers = %d\n",sum); 
 }
-
-
-   
-
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="While" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 
