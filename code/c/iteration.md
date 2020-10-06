@@ -1,7 +1,18 @@
 # Iteration
 
-* General form of a for loop: for \(init, condition, count\) { code }
-* 
+* General form of a for loop: 
+  * `var = x`
+  * `for (x init, x condition, x count)`
+  * `{`
+  *     `code`
+  * `}`
+* General form of a while loop: 
+  * `var = x` 
+  * `while (x condition)`
+  * `{`
+  *     `code`
+  * `}`
+
 {% tabs %}
 {% tab title="For" %}
 {% code title="iterationFor.c" %}
