@@ -12,6 +12,7 @@
   * [Strings](code/c/strings.md)
   * [Functions](code/c/functions.md)
   * [Operators](code/c/operators.md)
+  * [Iteration](code/c/iteration.md)
 * [C++](code/cpp.md)
 * [SQL](code/sql.md)
 * [VBA](code/vba.md)
