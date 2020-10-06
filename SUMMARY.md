@@ -18,6 +18,9 @@
 * [VBA](code/vba.md)
 * [Powershell](code/powershell.md)
 * [Bash](code/bash.md)
+* [HTML](code/html/README.md)
+  * [Template](code/html/template.md)
+* [Untitled](code/untitled.md)
 
 ## Tools
 
