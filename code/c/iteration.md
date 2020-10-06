@@ -1,7 +1,7 @@
 # Iteration
 
-General form of a for loop
-
+* General form of a for loop: for \(init, condition, count\) { code }
+* 
 {% tabs %}
 {% tab title="For" %}
 {% code title="iterationFor.c" %}
@@ -84,9 +84,81 @@ void iterationTestingFour(void)
 {% endtab %}
 
 {% tab title="While" %}
-```
+{% code title="iterationWhile.c" %}
+```c
+/***********************************************************************
+* iterationWhile.c
+* CLI application that shows how while loops work
+* Adnan Quisar
+* October 2020
+* ********************************************************************/
 
+#include <stdio.h>
+
+void iterationTestingOne(void);
+void iterationTestingTwo(void);
+void iterationTestingThree(void);
+void iterationTestingFour(void);
+
+int main(void)
+{
+    iterationTestingOne();
+    printf("\n");
+    iterationTestingTwo();
+    printf("\n");
+    iterationTestingThree();
+    printf("\n");
+    iterationTestingFour();
+    return 0;                    
+}
+
+/* function to show how while loops work */
+void iterationTestingOne(void)
+{
+    int count=0;
+    while (count <= 3)
+    {
+        printf("%d ", count);
+        count++;
+    }
+}
+
+/* function to show how while loops work */
+void iterationTestingTwo(void)
+{
+    int i=1, j=1;
+    while (i <= 7|| j <= 3)
+    {
+        printf("%d %d\n",i, j);
+        i++;
+        j++;
+    }
+}
+
+/* function to show how while loops work */
+void iterationTestingThree(void)
+{
+    int i=0;
+    do
+    {
+        printf("while vs do-while\n");
+    }
+    while(i == 1);
+        printf("Out of loop");
+}
+
+/* function to show how while loops work */
+void iterationTestingFour(void)
+{
+    int i=0;
+    while(i == 1)
+    {
+        printf("while vs do-while");
+    }
+    printf("Out of loop");
+}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
