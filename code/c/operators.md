@@ -5,8 +5,8 @@
 {% code title="operatorsExamples.c" %}
 ```c
 /***********************************************************************
-* helloWorld.c
-* CLI application that outputs an operator example to the console
+* operatorsExamples.c
+* CLI application that converts farenheit to degrees centigrade
 * Adnan Quisar
 * September 2020
 ***********************************************************************/
