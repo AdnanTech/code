@@ -42,9 +42,24 @@
 {% endtab %}
 
 {% tab title="style.css" %}
-```
+{% code title="style.css" %}
+```php
+/* ----------------------------------------------------------------
+	Basic
+-----------------------------------------------------------------*/
 
+body {
+	line-height: 1.5;
+	color: #555;
+	font-family: 'Lato', sans-serif;
+}
+
+a {
+	text-decoration: none !important;
+	color: #8A3AB9;
+}
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
