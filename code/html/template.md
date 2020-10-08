@@ -50,8 +50,7 @@
 
 body {
 	line-height: 1.5;
-	color: #555;
-	font-family: 'Lato', sans-serif;
+	color: #141414;
 }
 
 a {
