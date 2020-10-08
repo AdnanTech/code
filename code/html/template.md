@@ -40,25 +40,5 @@
 ```
 {% endcode %}
 {% endtab %}
-
-{% tab title="style.css" %}
-{% code title="style.css" %}
-```php
-/* ----------------------------------------------------------------
-	Basic
------------------------------------------------------------------*/
-
-body {
-	line-height: 1.5;
-	color: #141414;
-}
-
-a {
-	text-decoration: none !important;
-	color: #65bfdd;
-}
-```
-{% endcode %}
-{% endtab %}
 {% endtabs %}
 
