@@ -55,7 +55,7 @@ body {
 
 a {
 	text-decoration: none !important;
-	color: #8A3AB9;
+	color: #65bfdd;
 }
 ```
 {% endcode %}
