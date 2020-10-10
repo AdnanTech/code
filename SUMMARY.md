@@ -5,7 +5,8 @@
 ## Code
 
 * [Python](code/python.md)
-* [C\#](code/c-sharp.md)
+* [C\#](code/c-sharp/README.md)
+  * [Files](code/c-sharp/files.md)
 * [C](code/c/README.md)
   * [General Notes](code/c/general-notes.md)
   * [Template](code/c/template.md)
