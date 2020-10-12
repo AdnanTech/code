@@ -2,6 +2,9 @@
 
 ### Operator Examples
 
+* There are some cool built in functions
+  * sizeof\(\) - returns the size of the element as number of bytes
+
 {% code title="operatorsExamples.c" %}
 ```c
 /***********************************************************************

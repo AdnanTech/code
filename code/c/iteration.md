@@ -29,7 +29,6 @@
 void iterationTestingOne(void);
 void iterationTestingTwo(void);
 void iterationTestingThree(void);
-void iterationTestingFour(void);
 
 int main(void)
 {
@@ -39,7 +38,6 @@ int main(void)
     printf("\n");
     iterationTestingThree();
     printf("\n");
-    iterationTestingFour();
     return 0;                    
 }
 
@@ -56,17 +54,6 @@ void iterationTestingOne(void)
 /* function to show how for loops work */
 void iterationTestingTwo(void)
 {
-    int i;
-    while( i < 5 ) 
-	{
-        printf( "i = %d\n", i);
-        i++;  
-    }
-}
-
-/* function to show how for loops work */
-void iterationTestingThree(void)
-{
     int i, j = 10, sum;
     for( i = 0, sum = 0; i < 5; i++, j-- )
     {
@@ -76,7 +63,7 @@ void iterationTestingThree(void)
 }
 
 /* function to show how for loops work */
-void iterationTestingFour(void)
+void iterationTestingThree(void)
 {
     int x, sum=0, i;
     
