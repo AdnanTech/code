@@ -2,30 +2,33 @@
 
 A boilerplate, using ANSI standard and Professor Richard Handy's stylizing:
 
-{% code title="template.c" %}
+{% code title="\_\_\_\_.c" %}
 ```c
 /***********************************************************************
-* ctest.c
-* CLI application that acts as a c template file
+* ____.c
+* CLI application that ____
 * Adnan Quisar
 * October 2020
-***********************************************************************/
+* ********************************************************************/
 
 #include <stdio.h>
 
-void helloWorld(void);
+void function_name();
 
 int main(void)
 {
-    helloWorld();
-    return 0;
+    /* Short notes */
+    
+    printf("hello world");
+    return 0;                    
 }
 
-/* Display my name */
-void helloWorld(void)
+/* function to _____ n*/
+void function_name()
 {
-    printf("Hello World!\n");
-}  
+    printf("This is a function");
+}
+
 ```
 {% endcode %}
 
