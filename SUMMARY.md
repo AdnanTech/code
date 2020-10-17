@@ -6,6 +6,7 @@
 
 * [Python](code/python.md)
 * [C\#](code/c-sharp/README.md)
+  * [Notes](code/c-sharp/notes.md)
   * [Files](code/c-sharp/files.md)
 * [C](code/c/README.md)
   * [General Notes](code/c/general-notes.md)
