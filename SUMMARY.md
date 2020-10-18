@@ -14,6 +14,7 @@
   * [Iteration](code/c/iteration.md)
   * [Selection](code/c/selection.md)
   * [Arrays](code/c/arrays.md)
+  * [Pointers](code/c/pointers.md)
 * [C\#](code/c-sharp/README.md)
   * [Notes](code/c-sharp/notes.md)
   * [Files](code/c-sharp/files.md)
