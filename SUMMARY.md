@@ -5,9 +5,6 @@
 ## Code
 
 * [Python](code/python.md)
-* [C\#](code/c-sharp/README.md)
-  * [Notes](code/c-sharp/notes.md)
-  * [Files](code/c-sharp/files.md)
 * [C](code/c/README.md)
   * [General Notes](code/c/general-notes.md)
   * [Template](code/c/template.md)
@@ -15,6 +12,10 @@
   * [Functions](code/c/functions.md)
   * [Operators](code/c/operators.md)
   * [Iteration](code/c/iteration.md)
+  * [Selection](code/c/selection.md)
+* [C\#](code/c-sharp/README.md)
+  * [Notes](code/c-sharp/notes.md)
+  * [Files](code/c-sharp/files.md)
 * [C++](code/cpp.md)
 * [SQL](code/sql.md)
 * [VBA](code/vba.md)

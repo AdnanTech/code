@@ -77,6 +77,9 @@ void iterationTestingThree(void)
     } 
     printf("Total Sum of 10 numbers = %d\n",sum); 
 }
+
+
+
 ```
 {% endcode %}
 {% endtab %}
@@ -133,7 +136,7 @@ void iterationTestingTwo(void)
     }
 }
 
-/* function to show how while loops work */
+/* function to show how do while loops work */
 void iterationTestingThree(void)
 {
     int i=0;
@@ -154,6 +157,48 @@ void iterationTestingFour(void)
         printf("while vs do-while");
     }
     printf("Out of loop");
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Break" %}
+{% code title="breakExample.c" %}
+```c
+/***********************************************************************
+* breakExample.c
+* CLI application that shows how the break 
+* Adnan Quisar
+* October 2020
+* ********************************************************************/
+
+voidemptyBuffer(void);
+
+int main(void)
+{
+	char ch;
+	while(1)		/* always true */
+	{
+		printf("\nEnter a letter from 'a' to 'e': ");
+		while((ch =getchar()) != 'd')
+		{
+			emptyBuffer();
+			printf("\nSorry, %c is incorrect. Try again: ", ch);
+		}
+		emptyBuffer();
+		printf("\nWell done. You got it, %c is correct.", ch);
+		break;
+	}
+	return0;
+}
+
+/* Empty the keyboard buffer */
+void emptyBuffer(void)
+{
+	while(getchar() != '\n')
+	{
+		;
+	}
 }
 ```
 {% endcode %}
