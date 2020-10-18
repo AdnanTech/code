@@ -9,7 +9,7 @@ A boilerplate, using ANSI standard and Professor Richard Handy's stylizing:
 * CLI application that ____
 * Adnan Quisar
 * October 2020
-* ********************************************************************/
+* *********************************************************************/
 
 #include <stdio.h>
 
@@ -23,7 +23,7 @@ int main(void)
     return 0;                    
 }
 
-/* function to _____ n*/
+/* function to _____ */
 void function_name()
 {
     printf("This is a function");
