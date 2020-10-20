@@ -145,3 +145,51 @@ void sort(char *strings[], int n)
 {% endtab %}
 {% endtabs %}
 
+## Simple Array Examples
+
+{% tabs %}
+{% tab title="Passing some values from an array" %}
+```c
+#include <stdio.h>
+void display(int age1, int age2)
+{
+    printf("%d\n", age1);
+    printf("%d\n", age2);
+}
+
+int main()
+{
+    int ageArray[] = {2, 8, 4, 12};
+
+    // Passing second and third elements to display()
+    display(ageArray[1], ageArray[2]); 
+    return 0;
+}
+```
+{% endtab %}
+
+{% tab title="Passing the whole array" %}
+```c
+#include <stdio.h>
+float calculateSum(float age[]);
+
+int main() {
+    float result, age[] = {23.4, 55, 22.6, 3, 40.5, 18};
+
+    // age array is passed to calculateSum()
+    result = calculateSum(age); 
+    printf("Result = %.2f", result);
+    return 0;
+}
+
+float calculateSum(float age[]) {
+
+  float sum = 0.0;
+
+  for (int i = 0; i < 6; ++i) {
+		sum += age[i];
+  }
+```
+{% endtab %}
+{% endtabs %}
+
