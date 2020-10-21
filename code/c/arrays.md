@@ -145,17 +145,12 @@ void sort(char *strings[], int n)
 {% endtab %}
 {% endtabs %}
 
-## Simple Array Examples
+## Passing Array Examples
 
 {% tabs %}
 {% tab title="Passing some values from an array" %}
 ```c
 #include <stdio.h>
-void display(int age1, int age2)
-{
-    printf("%d\n", age1);
-    printf("%d\n", age2);
-}
 
 int main()
 {
@@ -165,10 +160,17 @@ int main()
     display(ageArray[1], ageArray[2]); 
     return 0;
 }
+
+void display(int age1, int age2)
+{
+    printf("%d\n", age1);
+    printf("%d\n", age2);
+}
+
 ```
 {% endtab %}
 
-{% tab title="Passing the whole array" %}
+{% tab title="Passing an Unsized Array" %}
 ```c
 #include <stdio.h>
 float calculateSum(float age[]);
@@ -189,6 +191,36 @@ float calculateSum(float age[]) {
   for (int i = 0; i < 6; ++i) {
 		sum += age[i];
   }
+```
+{% endtab %}
+
+{% tab title="Passing an Array with Pointers" %}
+```c
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void sort(char *strings[], int n);
+
+int main()
+{
+    char *string_database[4]={'\0'};
+    string_database[0]="Florida";
+    string_database[1]="Oregon";
+    string_database[2]="California";
+    string_database[3]="Georgia";
+    sort(string_database, 4);
+    return 0;
+}
+
+void sort(char *strings[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+    {
+        printf("String %d: %s\n", i, strings[i]);
+    }
+}
 ```
 {% endtab %}
 {% endtabs %}
