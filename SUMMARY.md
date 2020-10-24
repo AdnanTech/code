@@ -39,3 +39,8 @@
 * [Pentaho](tools/pentaho.md)
 * [Excel](tools/excel.md)
 
+## Resources
+
+* [HTML5 & CSS Templates](resources/html5-and-css-templates.md)
+* [Creating a logo](resources/creating-a-logo.md)
+
