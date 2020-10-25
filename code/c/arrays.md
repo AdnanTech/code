@@ -374,7 +374,7 @@ int main(void)
 {% endcode %}
 {% endtab %}
 
-{% tab title="" %}
+{% tab title="averageTemperature" %}
 {% code title="averageTemperature.c" %}
 ```c
 /***********************************************************************
