@@ -1,5 +1,7 @@
 # Arrays
 
+## Arrays
+
 An **array** is a collection of data items, all of the same type, accessed using a common name. Arrays are declared as a fixed length.
 
 {% tabs %}
@@ -253,6 +255,198 @@ void displayNumbers(int num[2][2])
     }
 }
 ```
+{% endtab %}
+{% endtabs %}
+
+## More complex Array Examples
+
+{% tabs %}
+{% tab title="Plotting Graphs \(2d array\)" %}
+{% code title="graphPlottingArrays.c" %}
+```c
+/***********************************************************************
+* graphPlottingArrays.c
+* Plot coordinates on a grid using a 2 dimensional array
+* Adnan Quisar
+* October 2020
+* ********************************************************************/
+
+#include <stdio.h>
+#define HEIGHT 5
+#define WIDTH 10
+
+void fillMatrixWithDots(charmatrix[][WIDTH]);
+void playGame(charmatrix[][WIDTH]);
+void displayMatrix(charmatrix[][WIDTH]);
+
+int main(void)
+{
+    char matrix[HEIGHT][WIDTH];
+    fillMatrixWithDots(matrix);
+    printf("Enter coordinates in form x, y (4, 2).\n");
+    printf("Use negative numbers to quit.\n");
+    playGame(matrix);
+    return 0;
+}
+
+/* Fill each cell with a dot */
+void fillMatrixWithDots(charmatrix[][WIDTH])
+{
+    int x, y;
+    for(y =0;y <HEIGHT;y++)        /* For each row */
+    {
+        for(x =0;x <WIDTH;x++)        /* and each column */
+        {
+            matrix[y][x]='.';    /* fill each cell with a dot */
+        }
+    }
+}
+
+/* Get next move */
+void playGame(charmatrix[][WIDTH])
+{
+    int x, y;
+    fillMatrixWithDots(matrix);
+    printf("Enter coordinates in form x, y (4, 2).\n");
+    printf("Use negative numbers to quit.\n");
+    while(x >=0)            /* Until negative ... */
+    {
+        displayMatrix(matrix);
+        printf("Coordinates: ");
+        scanf("%d,%d",&x,&y);
+        if((x >-1) && (x <WIDTH) && (y >-1) && (y <HEIGHT))
+        {
+            matrix[y][x]='\xB0';        /* Only if valid coordinates */
+        }
+    }
+}
+
+/* Display result of game so far */
+void displayMatrix(charmatrix[][WIDTH])
+{
+    int x, y;
+    for(y = 0;y < HEIGHT; y++)        /* For each row */
+    {
+        for(x = 0;x < WIDTH; x++)    /* and each column */
+        {
+            printf("%c ",matrix[y][x]);    /* display cell */
+        }
+        printf("\n");
+    }
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Calculating change" %}
+{% code title="calculateChange.c" %}
+```c
+/***********************************************************************
+* calculateChange.c
+* Calculate coinage
+* Demonstrate initialising arrays and operator sizeof
+* Using 4.56 with doubles shows rounding errors
+* Adnan Quisar
+* October 2020
+* ********************************************************************/
+
+#include <stdio.h>
+
+int main(void)
+{
+    int table[] = {50,20,10,5,2,1};
+    int index, pence, quantity, maxIndex;
+    doublepounds;
+    printf("Enter amount in pounds and pence: ");
+    scanf("%lf",&pounds);        /* Maybe rounding errors */
+    pence = pounds *100;    /* Rounding errors increased */
+    printf("pence = %d\n\n", pence);
+    maxIndex = sizeoftable / sizeoftable[0];    /* No of array slots */
+    for(index = 0;index < maxIndex; index++)
+    {
+        quantity = pence / table[index];
+        pence %= table[index];
+        printf("%2d %2dp coin(s)\n", quantity, table[index]);
+    }
+    return 0;
+}
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="" %}
+{% code title="averageTemperature.c" %}
+```c
+/***********************************************************************
+* averageTemperature.c
+* Averages arbitrary number of temperatures and checks for array
+* overflow
+* Adnan Quisar
+* October 2020
+* ********************************************************************/
+
+#include <stdio.h>
+#include <ctype.h>                                   /* For isdigit() */
+#include <stdlib.h>                                     /* For atof() */
+#define MAXDAYS 31
+
+int getTemps(floattemps[]);
+float calcAvg(floattemps[], intnoDays);
+void emptyBuffer(void);
+
+int main(void)
+{
+    float temper[MAXDAYS];
+    intdays = 0;
+    days = getTemps(temper);
+    printf("\nAverage is %.2f\n\n", calcAvg(temper,days));
+    return 0;
+}    
+/* Populates array of temperatures */
+int getTemps(floattemps[])
+{
+    charinput[5];
+    intday = 0;
+    printf("Type a letter to exit program.\n");
+    do
+    {
+        printf("Enter temperature for day %d: ", day +1);
+        scanf("%4s",input);        /* 4 characters only extracted */
+        emptyBuffer();            /* Ignore any extra characters */
+        if(isdigit(input[0]))    /* If first character is digit */
+        {
+        temps[day++] = atof(input);  /* convert str in float */
+        }
+        if(day == MAXDAYS)        /* Check for full temperature table */
+        {
+            printf("Maximum number of temperatures entered.\n");
+            break;
+            }
+    }while(isdigit(input[0]));    /* Repeat if 1st char is digit */
+    return day;
+}
+
+/* Calculate  average temperature */
+float calcAvg(floattemps[], intnoDays)
+{
+    floatsum = 0.0f; intday = 0;
+    for(day = 0; day < noDays; day++)
+    {
+        sum += temps[day];
+    }
+    return sum / noDays;
+}
+
+/* Empty the keyboard buffer */
+void emptyBuffer(void)
+{
+    while(getchar()!='\n')
+    {
+    ;
+    }
+}
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
