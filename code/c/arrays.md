@@ -342,10 +342,9 @@ void displayMatrix(charmatrix[][WIDTH])
 {% code title="calculateChange.c" %}
 ```c
 /***********************************************************************
-* calculateChange.c
-* Calculate coinage
-* Demonstrate initialising arrays and operator sizeof
-* Using 4.56 with doubles shows rounding errors
+* change.c
+* Calculates change and outputs change of an input variable of  type 
+* float
 * Adnan Quisar
 * October 2020
 * ********************************************************************/
@@ -354,19 +353,43 @@ void displayMatrix(charmatrix[][WIDTH])
 
 int main(void)
 {
-    int table[] = {50,20,10,5,2,1};
-    int index, pence, quantity, maxIndex;
-    doublepounds;
-    printf("Enter amount in pounds and pence: ");
-    scanf("%lf",&pounds);        /* Maybe rounding errors */
-    pence = pounds *100;    /* Rounding errors increased */
-    printf("pence = %d\n\n", pence);
-    maxIndex = sizeoftable / sizeoftable[0];    /* No of array slots */
-    for(index = 0;index < maxIndex; index++)
+    int pennies[] = {2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1};
+    
+    int j, pence, pounds, quantity, maxIndex;
+    double inputMoney;
+    
+    printf("Enter amount in pounds and pence (notes.change): ");
+    scanf("%lf",&inputMoney);        /* Maybe rounding errors */
+    
+    pence = inputMoney * 100;    /* Rounding errors increased */
+    
+    /* No of array slots */
+    maxIndex = sizeof pennies / sizeof pennies[0]; 
+    
+    printf("%10 Quantity ");
+    printf("%10 Description \n");
+    
+    for(j = 0; j < maxIndex; j++)
     {
-        quantity = pence / table[index];
-        pence %= table[index];
-        printf("%2d %2dp coin(s)\n", quantity, table[index]);
+        quantity = pence / pennies[j];
+        pence %= pennies[j];
+        if(pennies[j] < 100)
+        {
+            printf("%4d %8dp coin(s)\n", quantity, pennies[j]);
+        }
+        else
+        {
+            if(pennies[j] > 200)
+            {
+                printf("%4d %8d pound(s) notes\n", 
+                                quantity, pennies[j] / 100);
+            }
+            else
+            {
+                printf("%4d %8d pound coin(s)\n", 
+                                quantity, pennies[j] / 100);
+            }   
+        }
     }
     return 0;
 }
