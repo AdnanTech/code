@@ -6,3 +6,5 @@ MSYS2 uses a **terminal** called [**mintyy**](https://mintty.github.io/)**,** ba
 
 It uses the package manager [**pacman**](https://wiki.archlinux.org/index.php/pacman). Pacman has a lot of features such as **dependency resolution** and simple **complete system upgrades**, as well as straight-forward and **reproducible package building**.
 
+It also apart of my portable developer environment.
+
