@@ -33,6 +33,7 @@
 
 ## Tools
 
+* [MSYS2](tools/msys2.md)
 * [Git](tools/git.md)
 * [Vim](tools/vim.md)
 * [GitBook](tools/gitbook.md)
