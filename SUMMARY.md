@@ -34,6 +34,8 @@
 ## Tools
 
 * [MSYS2](tools/msys2.md)
+* [XAMPP](tools/xampp.md)
+* [Local by Flywheel](tools/local-by-flywheel.md)
 * [Git](tools/git.md)
 * [Vim](tools/vim.md)
 * [GitBook](tools/gitbook.md)
