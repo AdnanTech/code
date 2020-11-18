@@ -158,3 +158,29 @@ in tmain(void)
 {% endtab %}
 {% endtabs %}
 
+## Example 3
+
+Showing the types of pointer notation as well as the format specifier for a pointer
+
+```text
+#include <stdio.h>
+
+int main(void)
+{
+    int x = 4,y = 7;    /* Normal variables */
+    int *xptr, *yptr;    /* Pointers */
+    
+    printf("x starts at %4d \t y starts at %4d\n", x, y);
+    xptr = &x;    /* Pointer assigned the address of x */
+    yptr = &y;
+    *xptr +=7;    /* Dereferenced pointer, so 7 is added to x */
+    *yptr += 7;
+    
+    printf("\nAfterthe dereferenced pointer access:\n\n");
+    printf("x now is %7d \t y now is %7d\n", x, y);
+    printf("xptr is %p \t yptr is %p\n", xptr, yptr);
+    printf("*xptr is %7d \t *yptr is %7d\n\n", *xptr, *yptr);
+    return 0;
+}
+```
+
