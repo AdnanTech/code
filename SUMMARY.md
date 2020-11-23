@@ -16,6 +16,7 @@
   * [Pointers](code/c/pointers.md)
   * [Arrays](code/c/arrays.md)
   * [Strings Functions](code/c/strings-1.md)
+  * [Files](code/c/files.md)
 * [C\#](code/c-sharp/README.md)
   * [Notes](code/c-sharp/notes.md)
   * [Files](code/c-sharp/files.md)
