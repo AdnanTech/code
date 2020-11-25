@@ -217,3 +217,63 @@ int main(void)
 {% endtab %}
 {% endtabs %}
 
+## Treating files as strings
+
+### sscanf\(\)
+
+```c
+#include<stdio.h>
+
+int main(void)
+{
+    char packedDataInAString[]=
+    "the Great Cholesterol Con,"
+    "Dr Malcolm Kendrick,John Blake Publishing Ltd,2007,7.99,"
+    "978-1-84454-610-7";
+    
+    char title[35] = "";
+    char author[35] = "";
+    char publisher[35] = "";
+    int year = 0;
+    double price =0.0;
+    char isbn[20]= "";
+    sscanf(packedDataInAString,
+        "%[^,],%[^,],%[^,],%d,%lf,%[^,]",
+        title,author,publisher,&year,&price,isbn);
+    printf("A great book \"%s\".\n\n", packedDataInAString);
+    printf("The book \"%s\" by %s\n",title,author);
+    printf("is published by %s in %d.\n\n",publisher,year);
+    printf("Price: %c%.2f.\n\n",156, price);
+    printf("ISBN: %s\n\n",isbn);
+    return 0;
+}
+```
+
+### sprintf\(\)
+
+```c
+#include<stdio.h>
+
+int main()
+{
+    char target[50] = "";
+    char firstName[]= "John";
+    charinitial ='F';
+    charlastName[] ="Kennedy";
+    int bday =29;
+    int bmonth = 5;
+    int byear = 1917;
+    int dday =22;
+    int dmonth =11;
+    int dyear =1963;
+    printf("\nPresident: %s %c %s\n",firstName,initial,lastName);
+    printf("Born: %02d/%02d/%d\n",bday,bmonth,byear);
+    printf("Died: %02d/%02d/%d\n",dday,dmonth,dyear);
+    sprintf(target,"%s %c %s %02d/%02d/%d-%02d/%02d/%d",
+        firstName,initial,lastName,bday,bmonth,byear,dday,dmonth,dyear);
+    printf("\nAll in one string\n");
+    printf("The value in the target string is: %s.\n",target);
+    return 0;
+}
+```
+
