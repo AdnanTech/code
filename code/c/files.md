@@ -277,3 +277,138 @@ int main()
 }
 ```
 
+## Complex Program Example
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>                               /* non-ANSI standard */
+#include <string.h>
+
+void enterPin(char inputPin[]);
+_Bool isValidPin(char inputPin[],char pin[]);
+FILE *openFile(char fileName[],char fileMode[]);
+void printFile(FILE *input);
+
+int main(void)
+{
+    FILE *fp;
+    char pin[]="1234";
+    char inputPin[]="0000";
+    while(!isValidPin(inputPin,pin))
+    {
+        enterPin(inputPin);
+    }
+    fp = openFile("abc.txt","r");
+    printFile(fp);
+    fclose(fp);
+    return 0;
+}
+
+/* enter pin hiding entered characters */
+void enterPin(char inputPin[])
+{
+    int i;
+    printf("Enter pin: ");
+    for(i = 0;i < 4; i++)
+    {
+        inputPin[i] = getch();
+        /* getch() is non-ANSI standard */
+        putchar('*');
+    }
+    inputPin[i]='\0';
+}
+
+/* return true if pins are equal else return false */
+_Bool isValidPin(char inputPin[],char pin[])
+{
+    if(strcmp(pin,inputPin)!=0)
+    {
+        printf("\nERROR -Invalid pin\n");
+        return 0;
+    }return 1;
+}
+
+/* opens a file using a file name */
+FILE *openFile(char fileName[],char fileMode[])
+{
+    FILE *filePointer = fopen(fileName,fileMode);
+    if(!filePointer)
+    {
+        printf("Unable to open %s\n",fileName);
+        exit(1);
+    }
+    return filePointer;
+}
+
+/* read each file line and display on screen */
+void printFile(FILE *input)
+{
+    char line[81];
+    puts("\n");
+    while(fscanf(input,"%80[^\n]%*c", line) == 1)
+    {
+        printf("%s\n",line);
+    }
+}
+```
+
+## Reading binary dumps
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void openFile(char filename[],char modeOp[],char mode[], int errNo);
+void countCharacters(FILE *fp,char mode[]);
+
+int main(void)
+{
+    char filename[30];
+    printf("Enter filename: ");
+    scanf("%s", filename);
+    openFile(filename,"r","Text", 1);
+    openFile(filename,"rb","Binary",2);
+    return 0;
+}
+
+/* Open in either text or binary and count chars */
+void openFile(char filename[],char modeOp[],char mode[],int errNo)
+{
+    FILE *fp;
+    if(!(fp =fopen(filename, modeOp)))
+    {
+        printf("Can't open file %s.\n", filename);
+        exit(errNo);
+    }
+    countCharacters(fp, mode);
+    fclose(fp);
+}
+
+/* Count characters in file */
+void countCharacters(FILE *inputFile,char mode[])
+{
+    char ch;
+    int charCount = 0;
+    int returnCount = 0;
+    int lineCount = 0;
+    while(fscanf(inputFile,"%c", &ch) == 1)
+    {
+        charCount++;
+        /* Count characters */
+        if(ch =='\r')
+        {
+            returnCount++;
+            /* Count CRs */
+        }
+        else if(ch =='\n')
+        {
+            lineCount++;
+            /* Count LFs */
+        }
+    }
+    printf("File contains %d chars, %d CRs and %d LFs when opened in"" %s mode.\n",
+                charCount, returnCount, lineCount, mode);
+}
+```
+
