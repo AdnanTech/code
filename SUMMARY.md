@@ -27,6 +27,7 @@
     * [Basics of C++](code/cpp/cplusplus.com-tutorial/basics-of-c++/README.md)
       * [Structure of a program](code/cpp/cplusplus.com-tutorial/basics-of-c++/structure-of-a-program.md)
       * [Variables and Types](code/cpp/cplusplus.com-tutorial/basics-of-c++/variables-and-types.md)
+      * [Constants](code/cpp/cplusplus.com-tutorial/basics-of-c++/constants.md)
 * [SQL](code/sql.md)
 * [VBA](code/vba.md)
 * [Powershell](code/powershell.md)
