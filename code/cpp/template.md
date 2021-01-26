@@ -1,9 +1,7 @@
 # Template
 
-
-
 {% code title="\_\_\_\_.cpp" %}
-```c
+```cpp
 /***********************************************************************
 * ____.cpp
 * CLI application that ____
@@ -11,18 +9,16 @@
 * January 2021
 * *********************************************************************/
 
-#include <iostream>            //Header file for input and output
+#include <iostream>            
 
-class World {                  // Defines a class of objects
+class World {                  
 public:
-        // A constructor used every time an object is created
         World() { std::cout << "Hello World!\n"; }
         
-        // A destructor used when an object goes out of scope
-        ~World(){std::cout << "Good bye World!\n"; }
+        ~World() {std::cout << "Good bye World!\n"; }
 };
 
-World theWorld;        // Declares a global object of the class
+World theWorld;
 
 int main()
 {
