@@ -21,6 +21,7 @@
   * [Notes](code/c-sharp/notes.md)
   * [Files](code/c-sharp/files.md)
 * [C++](code/cpp/README.md)
+  * [Template](code/cpp/template.md)
   * [cplusplus.com Tutorial](code/cpp/cplusplus.com-tutorial/README.md)
     * [Introduction](code/cpp/cplusplus.com-tutorial/introduction/README.md)
       * [Compilers](code/cpp/cplusplus.com-tutorial/introduction/compilers.md)
